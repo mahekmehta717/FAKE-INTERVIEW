@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awareness | Simulation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --color-bg: #050505;
+            --color-card: #121212;
+            --color-card-light: #1a1a1a;
+            --color-red: #ff1a1a;
+            --color-text: #ffffff;
+            --color-text-muted: #a1a1aa;
+            --color-border: #333333;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .hero-section {
+            text-align: center;
+            margin-bottom: 5rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .hero-title {
+            color: var(--color-red);
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .hero-text {
+            font-size: 1.1rem;
+            color: var(--color-text-muted);
+        }
+
+        .section-title {
+            color: var(--color-red);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .section-content {
+            font-size: 1.1rem;
+            color: var(--color-text);
+            margin-bottom: 4rem;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .dark-card {
+            background: var(--color-card);
+            border: 1px solid var(--color-border);
+            padding: 2rem;
+            border-radius: 4px;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .dark-card i {
+            color: var(--color-red);
+            flex-shrink: 0;
+            margin-top: 0.25rem;
+        }
+
+        .dark-card h3 {
+            color: var(--color-text);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .dark-card p {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+        }
+
+        .final-section {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: var(--color-card-light);
+            border-top: 4px solid var(--color-red);
+            margin-top: 4rem;
+        }
+
+        .huge-text {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .huge-text-red {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-red);
+            margin-bottom: 3rem;
+            letter-spacing: 2px;
+        }
+
+        .btn-red {
+            display: inline-flex;
+            align-items: center;
+            background: var(--color-red);
+            color: white;
+            padding: 1.25rem 3rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.2s, transform 0.2s;
+        }
+        
+        .btn-red:hover {
+            background: #cc0000;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .huge-text { font-size: 2.5rem; }
+            .huge-text-red { font-size: 1.5rem; }
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero-section">
+            <h1 class="hero-title">YOU HAVE BEEN HACKED</h1>
+            <p class="hero-subtitle">Not really &mdash; this was a controlled social engineering simulation.</p>
+            <p class="hero-text">Here's what you should have noticed.</p>
+        </div>
+
+        <h2 class="section-title">01 &mdash; WHAT JUST HAPPENED?</h2>
+        <p class="section-content">
+            The internship verification experience was a controlled cybersecurity awareness simulation designed to demonstrate how social engineering can make a fake request feel trustworthy.
+        </p>
+
+        <h2 class="section-title">02 &mdash; RED FLAGS YOU SHOULD HAVE NOTICED</h2>
+        <div class="grid-2">
+            <div class="dark-card">
+                <i data-lucide="alert-triangle"></i>
+                <div>
+                    <h3>Unexpected internship communication</h3>
+                </div>
+            </div>
+            <div class="dark-card">
+                <i data-lucide="alert-triangle"></i>
+                <div>
+                    <h3>Urgency or pressure to act quickly</h3>
+                </div>
+            </div>
+            <div class="dark-card">
+                <i data-lucide="alert-triangle"></i>
+                <div>
+                    <h3>Suspicious verification request</h3>
+                </div>
+            </div>
+            <div class="dark-card">
+                <i data-lucide="alert-triangle"></i>
+                <div>
+                    <h3>Unverified website or link</h3>
+                </div>
+            </div>
+            <div class="dark-card">
+                <i data-lucide="alert-triangle"></i>
+                <div>
+                    <h3>Request for personal information</h3>
+                </div>
+            </div>
+            <div class="dark-card">
+                <i data-lucide="alert-triangle"></i>
+                <div>
+                    <h3>Professional branding does not guarantee authenticity</h3>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">03 &mdash; HOW TO STAY SAFE</h2>
+        <div class="grid-2">
+            <div class="dark-card">
+                <i data-lucide="shield-check"></i>
+                <div>
+                    <h3>VERIFY THE SOURCE</h3>
+                    <p>Check the official company careers website.</p>
+                </div>
+            </div>
+            <div class="dark-card">
+                <i data-lucide="shield-check"></i>
+                <div>
+                    <h3>CHECK THE URL</h3>
+                    <p>Look carefully at the domain before entering information.</p>
+                </div>
+            </div>
+            <div class="dark-card">
+                <i data-lucide="shield-check"></i>
+                <div>
+                    <h3>DON'T RUSH</h3>
+                    <p>Urgency is often used to make people skip verification.</p>
+                </div>
+            </div>
+            <div class="dark-card">
+                <i data-lucide="shield-check"></i>
+                <div>
+                    <h3>NEVER SHARE OTPs OR PASSWORDS</h3>
+                    <p>Legitimate recruitment processes should not require you to share your password or OTP.</p>
+                </div>
+            </div>
+            <div class="dark-card" style="grid-column: 1 / -1; max-width: 50%; margin: 0 auto;">
+                <i data-lucide="shield-check"></i>
+                <div>
+                    <h3>VERIFY INDEPENDENTLY</h3>
+                    <p>Contact the company using an independently verified channel.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="final-section">
+        <h2 class="huge-text">LOOKS REAL &ne; IS REAL</h2>
+        <p class="huge-text-red">PAUSE. VERIFY. THEN PROCEED.</p>
+        <a href="index.html" class="btn-red">BACK TO CAREERS</a>
+    </div>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

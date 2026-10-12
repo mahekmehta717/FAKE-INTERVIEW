@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Alert | You Have Been Hacked</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --color-bg: #050505;
+            --color-card: #121212;
+            --color-red: #ff1a1a;
+            --color-red-dark: #3a0000;
+            --color-text: #ffffff;
+            --color-text-muted: #a1a1aa;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+        .alert-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .icon-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(255, 26, 26, 0.1);
+            border: 2px solid var(--color-red);
+            color: var(--color-red);
+            margin-bottom: 2rem;
+            box-shadow: 0 0 30px rgba(255, 26, 26, 0.4);
+        }
+        .hero-title {
+            font-size: 4.5rem;
+            text-align: center;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .hero-title span.white-text { color: #ffffff; }
+        .hero-title span.red-text { color: var(--color-red); display: block; }
+        
+        .accent-line {
+            width: 150px;
+            height: 4px;
+            background: var(--color-red);
+            margin: 0 auto 2rem auto;
+            box-shadow: 0 0 10px rgba(255, 26, 26, 0.5);
+        }
+        
+        .hero-subtitle-bold {
+            font-size: 1.5rem;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.1rem;
+            text-align: center;
+            color: var(--color-text-muted);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+        
+        .outlined-box {
+            border: 2px solid var(--color-red);
+            color: var(--color-red);
+            padding: 1rem 2rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 4rem;
+            text-align: center;
+            background: rgba(255, 26, 26, 0.05);
+        }
+
+        .why-trust {
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+        .why-trust h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+        .why-trust p {
+            font-size: 1.1rem;
+            color: var(--color-text-muted);
+            margin-bottom: 2rem;
+        }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            width: 100%;
+            margin-bottom: 4rem;
+        }
+        .dark-card {
+            background: var(--color-card);
+            border: 1px solid #222;
+            border-top: 3px solid var(--color-red);
+            padding: 2rem 1.5rem;
+            border-radius: 4px;
+        }
+        .dark-card .number {
+            color: var(--color-red);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+        .dark-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .dark-card p {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+        }
+        
+        .btn-red {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--color-red);
+            color: white;
+            padding: 1.25rem 3rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.2s, transform 0.2s;
+            box-shadow: 0 4px 15px rgba(255, 26, 26, 0.3);
+        }
+        .btn-red:hover {
+            background: #cc0000;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .cards-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-container">
+        <div class="icon-wrapper">
+            <i data-lucide="shield-alert" style="width: 40px; height: 40px;"></i>
+        </div>
+        
+        <h1 class="hero-title">
+            <span class="white-text">YOU HAVE</span>
+            <span class="red-text">BEEN HACKED</span>
+        </h1>
+        
+        <div class="accent-line"></div>
+        
+        <div class="hero-subtitle-bold">RELAX. THIS WAS A SIMULATION.</div>
+        
+        <p class="hero-subtitle">
+            Your device was not hacked and no real credentials were collected.<br>
+            This demonstration shows how easily social engineering can make a convincing request appear legitimate. <strong>Password requests on unexpected internship links are a major warning sign</strong> &mdash; legitimate recruitment processes never ask for your email or personal password on an application verification form.
+        </p>
+
+        <div class="outlined-box">
+            CYBERSECURITY AWARENESS DEMONSTRATION
+        </div>
+
+        <div class="why-trust">
+            <h2>WHY DID YOU TRUST IT?</h2>
+            <p>The page was designed to look familiar and trustworthy. Corporate branding, internship language, deadlines and a verification form can make a request feel legitimate.</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="dark-card">
+                <div class="number">01 &mdash; TRUST</div>
+                <h3>Familiar Branding</h3>
+                <p>Familiar branding can make a website feel authentic.</p>
+            </div>
+            <div class="dark-card">
+                <div class="number">02 &mdash; URGENCY</div>
+                <h3>Pressure to Act</h3>
+                <p>Deadlines and limited opportunities can pressure you to act quickly.</p>
+            </div>
+            <div class="dark-card">
+                <div class="number">03 &mdash; VERIFICATION</div>
+                <h3>Normal Context</h3>
+                <p>A request to verify information can seem normal when it appears in the right context.</p>
+            </div>
+        </div>
+
+        <a href="internship-awareness.html" class="btn-red">CONTINUE TO LEARN &rarr;</a>
+    </div>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
